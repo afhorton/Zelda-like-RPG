@@ -1,5 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://cgg5vbla2bk6s"]
+[gd_scene load_steps=18 format=3 uid="uid://cgg5vbla2bk6s"]
 
+[ext_resource type="Script" path="res://scripts/world.gd" id="1_j8vul"]
 [ext_resource type="Texture2D" uid="uid://c45r61fpxw7bh" path="res://art/sprites/tilesets/plains.png" id="1_t6kt5"]
 [ext_resource type="Texture2D" uid="uid://dovln4283fid6" path="res://art/sprites/tilesets/grass.png" id="2_mcn7l"]
 [ext_resource type="Texture2D" uid="uid://bf1istucdp6ph" path="res://art/sprites/tilesets/fences.png" id="3_ttgeg"]
@@ -341,8 +342,12 @@ sources/3 = SubResource("TileSetAtlasSource_mul5f")
 sources/4 = SubResource("TileSetAtlasSource_cv5ee")
 sources/5 = SubResource("TileSetAtlasSource_6hpgm")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wp17a"]
+size = Vector2(56, 30)
+
 [node name="World" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_j8vul")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -361,3 +366,17 @@ position = Vector2(8, 84)
 
 [node name="enemy" parent="." instance=ExtResource("8_7bdkc")]
 position = Vector2(240, 105)
+
+[node name="collisions" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collisions"]
+polygon = PackedVector2Array(0, 0, 188, 0, 188, -30, 244, -30, 244, 0, 244, 26, 248, 30, 275, 30, 275, 41, 280, 47, 432, 47, 432, 192, 0, 192, 0, 3, 0, 1, -2, 1, -1, 0, -9, 4, -61, 56, -47, 214, 39, 248, 262, 230, 455, 245, 476, 169, 465, 19, 442, -50, 147, -67, -18, -41, -1, -1)
+
+[node name="cliffside_transition_point" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cliffside_transition_point"]
+position = Vector2(216, -15)
+shape = SubResource("RectangleShape2D_wp17a")
+
+[connection signal="body_entered" from="cliffside_transition_point" to="." method="_on_cliffside_transition_point_body_entered"]
+[connection signal="body_exited" from="cliffside_transition_point" to="." method="_on_cliffside_transition_point_body_exited"]

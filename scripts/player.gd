@@ -141,3 +141,4 @@ func _on_deal_attack_timer_timeout():
 	$deal_attack_timer.stop()
 	global.player_currect_attack = false
 	attack_ip = false
+
