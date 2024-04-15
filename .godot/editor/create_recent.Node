@@ -1,9 +1,9 @@
+CollisionShape2D
 Area2D
 StaticBody2D
 Camera2D
 CollisionPolygon2D
 TileMap
-CollisionShape2D
 Timer
 AnimatedSprite2D
 CharacterBody2D

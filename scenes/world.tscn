@@ -15,7 +15,7 @@ script = ExtResource("1_j8vul")
 [node name="TileMap" parent="." instance=ExtResource("2_g7lkn")]
 
 [node name="Player" parent="." instance=ExtResource("7_w5qvi")]
-position = Vector2(8, 84)
+position = Vector2(216, 20)
 
 [node name="enemy" parent="." instance=ExtResource("8_7bdkc")]
 position = Vector2(240, 105)
