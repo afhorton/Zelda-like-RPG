@@ -1,0 +1,35 @@
+~ main
+
+if GlobalDialogue.given_heads_item == false:
+	Head: [[Hello | Well, howdy - | Sup, dawg]]... how can I help you! 
+	- Who are you?
+		Head: I am the great and mighty Head.
+		- I think I have something for you.
+		Head: Oh, really?
+		- Yes, I found somethihg with your name on it.
+			if GlobalDialogue.found_heads_item == true:
+				Head: Ahah, my rod!  I must have dropped it.  Thank you so much!
+				set GlobalDialogue.given_heads_item = true
+				=> END
+			else:
+				Head: That is my name, but that is not my item.
+				Head: Hmmm...weird.
+		- No, just kidding. => END
+	- I think I have something for you.
+		Head: Oh, really?
+		- Yes, I found somethihg with your name on it.
+			if GlobalDialogue.found_heads_item == true:
+				Head: Ahah, my rod!  I must have dropped it.  Thank you so much!
+				set GlobalDialogue.given_heads_item = true
+				=> END
+			else:
+				Head: That is my name, but that is not my item.
+				Head: Hmmm...weird.
+		- No, just kidding. => END
+	- Goodbye. => END
+else:
+	Head: [[Hello | Well, howdy - | Sup, dawg]], thanks for finding my rod.
+	Head: It's a good thing that it didn't fall into the wrong hands.
+	Head: Something catastrophic could have happened!
+	=> END
+=> END

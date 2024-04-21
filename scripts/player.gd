@@ -10,11 +10,23 @@ var player_alive = true
 
 var attack_ip = false
 
+var head_in_range = false
+var in_rod_dec = false
+
 
 func _ready():
 	$AnimatedSprite2D.play("front_idle")
 
 func _physics_process(delta):
+	if head_in_range == true:
+		if Input.is_action_just_pressed("ui_accept"):
+			DialogueManager.show_dialogue_balloon(load("res://main.dialogue"), "main")
+			return
+	
+	if in_rod_dec == true:
+		if Input.is_action_just_pressed("ui_accept"):
+			GlobalDialogue.found_heads_item = true
+			
 	player_movement(delta)
 	enemy_attack()
 	attack()
@@ -169,3 +181,24 @@ func _on_regen_timer_timeout():
 			health = 100
 	if health <= 0:
 		health = 0
+
+
+func _on_detection_area_body_entered(body):
+	if body.has_method("head"):
+		head_in_range = true
+
+
+func _on_detection_area_body_exited(body):
+	if body.has_method("head"):
+		head_in_range = false
+
+
+func _on_rod_detection_body_entered(body):
+	if body.has_method("player"):
+		in_rod_dec = true
+
+
+func _on_rod_detection_body_exited(body):
+	if body.has_method("player"):
+		in_rod_dec = false
+

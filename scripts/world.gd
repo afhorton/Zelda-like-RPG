@@ -13,6 +13,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	change_scene()
+	if GlobalDialogue.found_heads_item == true:
+		$rod.visible = false
 
 
 
@@ -31,3 +33,4 @@ func change_scene():
 			get_tree().change_scene_to_file("res://scenes/cliff_side.tscn")
 			global.game_first_loadin = false
 			global.finish_changescenes()
+

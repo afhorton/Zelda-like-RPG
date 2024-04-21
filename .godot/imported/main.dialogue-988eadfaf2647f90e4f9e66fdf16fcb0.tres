@@ -1,0 +1,519 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_6jlkw"]
+
+[resource]
+script = ExtResource("1_6jlkw")
+using_states = PackedStringArray()
+titles = {
+"main": "3"
+}
+character_names = PackedStringArray("Head")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "main",
+"type": &"title"
+},
+"10": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GlobalDialogue"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "found_heads_item"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "true"
+}, {
+"type": "colon"
+}])
+},
+"id": "10",
+"next_conditional_id": "14",
+"next_id": "11",
+"next_id_after": "35",
+"parent_id": "9",
+"type": &"condition"
+},
+"11": {
+"character": "Head",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "12",
+"notes": "",
+"parent_id": "10",
+"tags": PackedStringArray(),
+"text": "Ahah, my rod!  I must have dropped it.  Thank you so much!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ahah, my rod!  I must have dropped it.  Thank you so much!",
+"type": &"dialogue"
+},
+"12": {
+"id": "12",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GlobalDialogue"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "given_heads_item"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
+"next_id": "13",
+"parent_id": "10",
+"type": &"mutation"
+},
+"13": {
+"id": "13",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "10",
+"type": &"goto"
+},
+"14": {
+"id": "14",
+"next_conditional_id": "35",
+"next_id": "15",
+"next_id_after": "35",
+"parent_id": "9",
+"type": &"condition"
+},
+"15": {
+"character": "Head",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "16",
+"notes": "",
+"parent_id": "14",
+"tags": PackedStringArray(),
+"text": "That is my name, but that is not my item.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "That is my name, but that is not my item.",
+"type": &"dialogue"
+},
+"16": {
+"character": "Head",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "35",
+"notes": "",
+"parent_id": "14",
+"tags": PackedStringArray(),
+"text": "Hmmm...weird.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hmmm...weird.",
+"type": &"dialogue"
+},
+"17": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "end",
+"next_id_after": "35",
+"notes": "",
+"parent_id": "5",
+"tags": PackedStringArray(),
+"text": "No, just kidding.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No, just kidding.",
+"type": &"response"
+},
+"18": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "19",
+"next_id_after": "35",
+"notes": "",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "I think I have something for you.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I think I have something for you.",
+"type": &"response"
+},
+"19": {
+"character": "Head",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "20",
+"notes": "",
+"parent_id": "18",
+"tags": PackedStringArray(),
+"text": "Oh, really?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oh, really?",
+"type": &"dialogue"
+},
+"20": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "20",
+"next_id": "21",
+"next_id_after": "35",
+"notes": "",
+"parent_id": "18",
+"responses": PackedStringArray("20", "28"),
+"tags": PackedStringArray(),
+"text": "Yes, I found somethihg with your name on it.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes, I found somethihg with your name on it.",
+"type": &"response"
+},
+"21": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GlobalDialogue"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "found_heads_item"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "true"
+}, {
+"type": "colon"
+}])
+},
+"id": "21",
+"next_conditional_id": "25",
+"next_id": "22",
+"next_id_after": "35",
+"parent_id": "20",
+"type": &"condition"
+},
+"22": {
+"character": "Head",
+"character_replacements": Array[Dictionary]([]),
+"id": "22",
+"next_id": "23",
+"notes": "",
+"parent_id": "21",
+"tags": PackedStringArray(),
+"text": "Ahah, my rod!  I must have dropped it.  Thank you so much!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ahah, my rod!  I must have dropped it.  Thank you so much!",
+"type": &"dialogue"
+},
+"23": {
+"id": "23",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GlobalDialogue"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "given_heads_item"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
+"next_id": "24",
+"parent_id": "21",
+"type": &"mutation"
+},
+"24": {
+"id": "24",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "21",
+"type": &"goto"
+},
+"25": {
+"id": "25",
+"next_conditional_id": "35",
+"next_id": "26",
+"next_id_after": "35",
+"parent_id": "20",
+"type": &"condition"
+},
+"26": {
+"character": "Head",
+"character_replacements": Array[Dictionary]([]),
+"id": "26",
+"next_id": "27",
+"notes": "",
+"parent_id": "25",
+"tags": PackedStringArray(),
+"text": "That is my name, but that is not my item.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "That is my name, but that is not my item.",
+"type": &"dialogue"
+},
+"27": {
+"character": "Head",
+"character_replacements": Array[Dictionary]([]),
+"id": "27",
+"next_id": "35",
+"notes": "",
+"parent_id": "25",
+"tags": PackedStringArray(),
+"text": "Hmmm...weird.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hmmm...weird.",
+"type": &"dialogue"
+},
+"28": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "28",
+"next_id": "end",
+"next_id_after": "35",
+"notes": "",
+"parent_id": "18",
+"tags": PackedStringArray(),
+"text": "No, just kidding.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No, just kidding.",
+"type": &"response"
+},
+"29": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "29",
+"next_id": "end",
+"next_id_after": "35",
+"notes": "",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "Goodbye.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Goodbye.",
+"type": &"response"
+},
+"3": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GlobalDialogue"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "given_heads_item"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "false"
+}, {
+"type": "colon"
+}])
+},
+"id": "3",
+"next_conditional_id": "30",
+"next_id": "4",
+"next_id_after": "35",
+"type": &"condition"
+},
+"30": {
+"id": "30",
+"next_conditional_id": "35",
+"next_id": "31",
+"next_id_after": "35",
+"type": &"condition"
+},
+"31": {
+"character": "Head",
+"character_replacements": Array[Dictionary]([]),
+"id": "31",
+"next_id": "32",
+"notes": "",
+"parent_id": "30",
+"tags": PackedStringArray(),
+"text": "[[Hello | Well, howdy - | Sup, dawg]], thanks for finding my rod.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Hello | Well, howdy - | Sup, dawg]], thanks for finding my rod.",
+"type": &"dialogue"
+},
+"32": {
+"character": "Head",
+"character_replacements": Array[Dictionary]([]),
+"id": "32",
+"next_id": "33",
+"notes": "",
+"parent_id": "30",
+"tags": PackedStringArray(),
+"text": "It's a good thing that it didn't fall into the wrong hands.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It's a good thing that it didn't fall into the wrong hands.",
+"type": &"dialogue"
+},
+"33": {
+"character": "Head",
+"character_replacements": Array[Dictionary]([]),
+"id": "33",
+"next_id": "34",
+"notes": "",
+"parent_id": "30",
+"tags": PackedStringArray(),
+"text": "Something catastrophic could have happened!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Something catastrophic could have happened!",
+"type": &"dialogue"
+},
+"34": {
+"id": "34",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "30",
+"type": &"goto"
+},
+"35": {
+"id": "35",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"4": {
+"character": "Head",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"notes": "",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "[[Hello | Well, howdy - | Sup, dawg]]... how can I help you!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Hello | Well, howdy - | Sup, dawg]]... how can I help you!",
+"type": &"dialogue"
+},
+"5": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"next_id_after": "35",
+"notes": "",
+"parent_id": "3",
+"responses": PackedStringArray("5", "18", "29"),
+"tags": PackedStringArray(),
+"text": "Who are you?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Who are you?",
+"type": &"response"
+},
+"6": {
+"character": "Head",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"notes": "",
+"parent_id": "5",
+"tags": PackedStringArray(),
+"text": "I am the great and mighty Head.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I am the great and mighty Head.",
+"type": &"dialogue"
+},
+"7": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"next_id_after": "8",
+"notes": "",
+"parent_id": "5",
+"responses": PackedStringArray("7"),
+"tags": PackedStringArray(),
+"text": "I think I have something for you.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I think I have something for you.",
+"type": &"response"
+},
+"8": {
+"character": "Head",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"notes": "",
+"parent_id": "5",
+"tags": PackedStringArray(),
+"text": "Oh, really?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oh, really?",
+"type": &"dialogue"
+},
+"9": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"next_id_after": "35",
+"notes": "",
+"parent_id": "5",
+"responses": PackedStringArray("9", "17"),
+"tags": PackedStringArray(),
+"text": "Yes, I found somethihg with your name on it.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes, I found somethihg with your name on it.",
+"type": &"response"
+}
+}
+raw_text = "~ main
+
+if GlobalDialogue.given_heads_item == false:
+	Head: [[Hello | Well, howdy - | Sup, dawg]]... how can I help you! 
+	- Who are you?
+		Head: I am the great and mighty Head.
+		- I think I have something for you.
+		Head: Oh, really?
+		- Yes, I found somethihg with your name on it.
+			if GlobalDialogue.found_heads_item == true:
+				Head: Ahah, my rod!  I must have dropped it.  Thank you so much!
+				set GlobalDialogue.given_heads_item = true
+				=> END
+			else:
+				Head: That is my name, but that is not my item.
+				Head: Hmmm...weird.
+		- No, just kidding. => END
+	- I think I have something for you.
+		Head: Oh, really?
+		- Yes, I found somethihg with your name on it.
+			if GlobalDialogue.found_heads_item == true:
+				Head: Ahah, my rod!  I must have dropped it.  Thank you so much!
+				set GlobalDialogue.given_heads_item = true
+				=> END
+			else:
+				Head: That is my name, but that is not my item.
+				Head: Hmmm...weird.
+		- No, just kidding. => END
+	- Goodbye. => END
+else:
+	Head: [[Hello | Well, howdy - | Sup, dawg]], thanks for finding my rod.
+	Head: It's a good thing that it didn't fall into the wrong hands.
+	Head: Something catastrophic could have happened!
+	=> END
+=> END"
+metadata/dialogue_manager_version = "2.38.0"

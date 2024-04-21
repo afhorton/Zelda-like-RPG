@@ -1,11 +1,12 @@
-ProgressBar
-Timer
 CollisionShape2D
 Area2D
+Sprite2D
+ColorRect
 StaticBody2D
+AnimatedSprite2D
+CharacterBody2D
+ProgressBar
+Timer
 Camera2D
 CollisionPolygon2D
 TileMap
-AnimatedSprite2D
-CharacterBody2D
-Sprite2D
